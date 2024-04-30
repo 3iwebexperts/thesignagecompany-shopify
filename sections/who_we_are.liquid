@@ -1,0 +1,129 @@
+<div class="page-width">
+  <div class="team_sec_inner pad80">
+    <div class="proj_head">
+      {% if section.settings.heading != blank %}
+        <h3>{{ section.settings.heading }}</h3>
+      {% endif %}
+      {% if section.settings.content != blank %}
+        <p>{{ section.settings.content }}</p>
+      {% endif %}
+    </div>
+    <div class="team_members">
+      <div class="inner_members">
+        <div class="team_lists">
+          {% for block in section.blocks %}
+            <div class="team_item">
+              <div class="team_img">
+                {% if block.settings.timage != blank %}
+                  <div class="backimg" style="background-image:url({{ block.settings.timage | img_url:'master' }});">
+                    <svg
+                      class="transparent_svg"
+                      data-name="Layer 1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 281 301"
+                    >
+                      <rect class="cls-1" x="0.5" y="0.5" width="280" height="300"></rect>
+                    </svg>
+                  </div>
+                {% else %}
+                  <div class="backimg" style="background-image:url({{ 'team.png' | asset_url }});">
+                    <svg
+                      class="transparent_svg"
+                      data-name="Layer 1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 281 301"
+                    >
+                      <rect class="cls-1" x="0.5" y="0.5" width="280" height="300"></rect>
+                    </svg>
+                  </div>
+                {% endif %}
+              </div>
+              <div class="team_info">
+                {% if block.settings.tname != blank %}
+                  <div class="team_tt">
+                    <h4>{{ block.settings.tname }}</h4>
+                  </div>
+                {% endif %}
+                {% if block.settings.tposition != blank %}
+                  <div class="team_post">
+                    <p>{{ block.settings.tposition }}</p>
+                  </div>
+                {% endif %}
+                {% if block.settings.tcontent != blank %}
+                  <div class="team_desc">
+                    {{ block.settings.tcontent }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "Who we are",
+   "class": "who-we-are",
+   "tag":"section",
+   "settings":[
+    {
+       "type":"text",
+       "id": "heading",
+       "label": "Heading",
+       "default": "Who we are"
+    },
+    {
+       "type":"textarea",
+       "id": "content",
+       "label": "content",
+       "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    }
+   ],
+"blocks": [
+      {
+       "name": "Team",
+       "type": "Team",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "timage",
+           "label": "Image"
+         },
+         {
+           "type": "text",
+           "id": "tname",
+           "label": "Name",
+           "default":"John Lee"
+         },
+         {
+           "type": "text",
+           "id": "tposition",
+           "label": "Position",
+           "default":"Founder"
+         },
+         {
+           "type": "richtext",
+           "id": "tcontent",
+           "label": "Content",
+           "default":"<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>"
+         }
+      ]
+   }
+],
+   "presets": [
+     {
+       "name": "Who we are",
+       "category": "Images"
+     }
+   ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

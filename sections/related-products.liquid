@@ -1,0 +1,97 @@
+<div class="similar_products">
+  <product-recommendations
+    class="product-recommendations isolate"
+    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=20"
+  >
+    <div class="similar_pros">
+      <div class="pad80">
+        <div class="inner_similar">
+          <div class="sim_head page-width">
+            {% if section.settings.heading != blank %}
+              <h3>{{ section.settings.heading }}</h3>
+            {% endif %}  
+            <div class="slide_btns">
+              <div class="slide_btn sld_prev">
+                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="44" height="44" rx="9.5" stroke="#535353"></rect>
+                  <path d="M27.2926 15.2133L17.2933 22.4855C17.2003 22.553 17.1265 22.6332 17.0762 22.7215C17.0259 22.8098 17 22.9044 17 23C17 23.0956 17.0259 23.1902 17.0762 23.2785C17.1265 23.3668 17.2003 23.447 17.2933 23.5145L27.2926 30.7867C27.4325 30.8885 27.6107 30.9579 27.8048 30.986C27.9988 31.0141 28.2 30.9997 28.3828 30.9446C28.5656 30.8895 28.7219 30.7962 28.8317 30.6765C28.9416 30.5568 29.0002 30.4161 29 30.2722L29 15.7278C29.0002 15.5839 28.9416 15.4432 28.8317 15.3235C28.7219 15.2038 28.5656 15.1105 28.3828 15.0554C28.2 15.0003 27.9988 14.9859 27.8048 15.014C27.6107 15.0421 27.4325 15.1115 27.2926 15.2133Z" fill="#535353"></path>
+                </svg>
+              </div>
+              <div class="slide_btn sld_nxt">
+                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="44" height="44" rx="9.5" stroke="#535353"></rect>
+                  <path d="M27.2926 15.2133L17.2933 22.4855C17.2003 22.553 17.1265 22.6332 17.0762 22.7215C17.0259 22.8098 17 22.9044 17 23C17 23.0956 17.0259 23.1902 17.0762 23.2785C17.1265 23.3668 17.2003 23.447 17.2933 23.5145L27.2926 30.7867C27.4325 30.8885 27.6107 30.9579 27.8048 30.986C27.9988 31.0141 28.2 30.9997 28.3828 30.9446C28.5656 30.8895 28.7219 30.7962 28.8317 30.6765C28.9416 30.5568 29.0002 30.4161 29 30.2722L29 15.7278C29.0002 15.5839 28.9416 15.4432 28.8317 15.3235C28.7219 15.2038 28.5656 15.1105 28.3828 15.0554C28.2 15.0003 27.9988 14.9859 27.8048 15.014C27.6107 15.0421 27.4325 15.1115 27.2926 15.2133Z" fill="#535353"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-width">
+          {% if recommendations.performed and recommendations.products_count > 0 %}
+            <div class="sim_pro_list swiper">
+              <div class="sim_pro_inner swiper-wrapper">
+                {% for recommendation in recommendations.products %}
+                  <div class="sim_pro_item swiper-slide">
+                    <a href="{{ recommendation.url }}">
+                      <div class="sim_pro_img">
+                        <div
+                          class="backimg visible"
+                          style="background-image:url({{ recommendation.featured_image | img_url: "360x" }});"
+                        >
+                          <svg
+                            class="transparent_svg"
+                            data-name="Layer 1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 359 446"
+                          >
+                            <rect class="cls-1" x="0.5" y="0.5" width="358" height="445"></rect>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="sim_pro_info">
+                        <div class="sim_pro_tt">
+                          <h3>{{ recommendation.title }}</h3>
+                        </div>
+                        <div class="sim_pro_price">
+                          <h3>{{ recommendation.price | money }}</h3>
+                  {%- if recommendation.compare_at_price > recommendation.price %}
+                          <p class="ssale_price">{{ recommendation.compare_at_price | money }}</p>
+                  {% endif %}  
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </product-recommendations>
+</div>
+
+{% schema %}
+{
+  "name": "Product recommendations",
+  "tag": "section",
+  "class": "similar-products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "You may also like",
+      "label": "Heading"
+    }
+  ],
+  "presets": [
+      {
+        "name": "Product recommendations",
+        "category": "Images"
+      }
+    ]
+}
+{% endschema %}

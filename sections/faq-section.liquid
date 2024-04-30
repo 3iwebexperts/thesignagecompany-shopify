@@ -1,0 +1,165 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<div class="boxaccordion">
+{%- if section.blocks.size > 0 -%}		
+  <div class="containerwidth page-width ">
+    {% for block in section.blocks %}
+       {% case block.type %}
+       {% when "main-heading" %}
+      <div class="main-heading">
+        <h2>{{ block.settings['main-heading'] }}</h2>
+      </div>
+       {% when "Answer" %}
+      <div class="wrapper">
+        {% if block.settings.que != blank %}
+          <button class="toggle">
+            {{ block.settings.que }}
+            <i class="fas fa-plus icon"></i>
+          </button>
+        {% endif %}
+        {% if block.settings.ans != blank %}
+          <div class="content">
+            <p>{{ block.settings.ans }}</p>
+          </div>
+        {% endif %}
+      </div>
+      {% endcase %}
+    {% endfor %}
+  </div> 
+{% endif %}  
+</div>
+<style>
+  .containerwidth {
+
+            width: 100%;
+/*             margin-top: 60px; */
+            margin-bottom: 60px;
+/*             max-width: 1200px !important; */
+        }
+
+        .wrapper {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
+            box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
+        }
+
+        .toggle,
+        .content {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .toggle {
+            width: 100%;
+            background-color: transparent;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+/*             font-size: 16px; */
+            color: #111130;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 0;
+        }
+        .content {
+            position: relative;
+            font-size: 14px;
+            text-align: justify;
+            line-height: 30px;
+            height: 0;
+            overflow: hidden;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+</style>
+
+<script>
+   //<![CDATA[
+          let toggles = document.getElementsByClassName("toggle");
+          let contentDiv = document.getElementsByClassName("content");
+          let icons = document.getElementsByClassName("fas");
+
+          for (let i = 0; i < toggles.length; i++) {
+              toggles[i].addEventListener("click", () => {
+                  if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight) {
+                      contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
+                      toggles[i].style.color = "#0084e9";
+                      icons[i].classList.remove("fa-plus");
+                      icons[i].classList.add("fa-minus");
+                  } else {
+                      contentDiv[i].style.height = "0px";
+                      toggles[i].style.color = "#111130";
+                      icons[i].classList.remove("fa-minus");
+                      icons[i].classList.add("fa-plus");
+                  }
+
+                  for (let j = 0; j < contentDiv.length; j++) {
+                      if (j !== i) {
+                          contentDiv[j].style.height = 0;
+                          toggles[j].style.color = "#111130";
+                          icons[j].classList.remove("fa-minus");
+                          icons[j].classList.add("fa-plus");
+                      }
+                  }
+              });
+          }
+  //]]>
+</script>
+
+{% schema %}
+{
+  "name": "Faq section",
+  "class": "bfaq",
+  "settings": [],
+  "blocks": [
+{
+ "name": "Question",
+ "type": "Answer",
+ "settings": [
+  {
+  "type":"text",
+  "id":"que",
+  "label":"Question"
+  },
+  {
+  "type":"richtext",
+  "id":"ans",
+  "label":"Answer"
+  }
+]
+},
+{
+"name": "Main Heading",
+"type": "main-heading",
+"settings": [
+{
+"type":"text",
+"id":"main-heading",
+"label":"Heading"
+}
+]
+}
+],
+  "presets":[
+    {
+      "name":"Faq section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

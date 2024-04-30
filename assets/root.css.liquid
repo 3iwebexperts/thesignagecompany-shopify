@@ -1,0 +1,322 @@
+ :root {
+        {% assign wrapper_size = 1780 %}
+        {% assign desktop_min_width = 320 %}
+        
+        --ds_max_viewport: {{ wrapper_size }};
+        --ds_min_viewport: {{ desktop_min_width }};
+        --ds_max_viewport_px: {{ wrapper_size }}px;
+        --ds_min_viewport_px: {{ desktop_min_width }}px;
+        
+        /*60px*/   
+        {% assign h2_size_max = 56 %}
+        {% assign h2_size_min = h2_size_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign h2_size_min = 20 %}
+        --h2_size: min(calc({{ h2_size_min }}px + ({{ h2_size_max }} - {{ h2_size_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ h2_size_max }}px);
+
+        /*48px*/   
+        {% assign h3_size_max = 44 %}
+        {% assign h3_size_min = h3_size_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign h3_size_min = 22 %}
+        --h3_size: min(calc({{ h3_size_min }}px + ({{ h3_size_max }} - {{ h3_size_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ h3_size_max }}px);
+
+         /*42px*/   
+        {% assign h3s_size_max = 38 %}
+        {% assign h3s_size_min = h3s_size_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign h3s_size_min = 20 %}
+        --h3s_size: min(calc({{ h3s_size_min }}px + ({{ h3s_size_max }} - {{ h3s_size_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ h3s_size_max }}px);
+        
+
+        /*34px*/
+        {% assign f34_max = 30 %}
+        {% assign f34_min = f34_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f34_min = 20 %}
+        --f34_size: min(calc({{ f34_min }}px + ({{ f34_max }} - {{ f34_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f34_max }}px);
+
+        /*30px*/   
+        {% assign h3mm_size_max = 26 %}
+        {% assign h3mm_size_min = h3mm_size_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign h3mm_size_min = 18 %}
+        --h3mm_size: min(calc({{ h3mm_size_min }}px + ({{ h3mm_size_max }} - {{ h3mm_size_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ h3mm_size_max }}px);
+        
+        /*30px*/
+        {% assign f30_max = 26 %}
+        {% assign f30_min = f30_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f30_min = 14 %}
+        --f30_size: min(calc({{ f30_min }}px + ({{ f30_max }} - {{ f30_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f30_max }}px);
+
+        /*28px*/   
+        {% assign h3m_size_max = 24 %}
+        {% assign h3m_size_min = h3m_size_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign h3m_size_min = 12 %}
+        --h3m_size: min(calc({{ h3m_size_min }}px + ({{ h3m_size_max }} - {{ h3m_size_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ h3m_size_max }}px);
+        
+         /*26px*/
+        {% assign f26_max = 22 %}
+        {% assign f26_min = f26_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f26_min = 12 %}
+        --f26_size: min(calc({{ f26_min }}px + ({{ f26_max }} - {{ f26_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f26_max }}px);
+
+        /*24px*/
+        {% assign f24_max = 22 %}
+        {% assign f24_min = f24_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f24_min = 12 %}
+        --f24_size: min(calc({{ f24_min }}px + ({{ f24_max }} - {{ f24_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f24_max }}px);
+
+        /*24px*/
+        {% assign f242_max = 22 %}
+        {% assign f242_min = f242_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f242_min = 10 %}
+        --f242_size: min(calc({{ f242_min }}px + ({{ f242_max }} - {{ f242_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f242_max }}px);
+          
+        /*22px*/   
+        {% assign h4_size_max = 20 %}
+        {% assign h4_size_min = h4_size_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign h4_size_min = 12 %}
+        --h4_size: min(calc({{ h4_size_min }}px + ({{ h4_size_max }} - {{ h4_size_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ h4_size_max }}px);
+        
+         /*22px*/
+        {% assign f22_max = 20 %}
+        {% assign f22_min = f22_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f22_min = 16 %}
+        --f22_size: min(calc({{ f22_min }}px + ({{ f22_max }} - {{ f22_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f22_max }}px);
+        
+         /*20px*/
+        {% assign f20_max = 18 %}
+        {% assign f20_min = f20_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f20_min = 16 %}
+        --f20_size: min(calc({{ f20_min }}px + ({{ f20_max }} - {{ f20_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f20_max }}px);
+
+        /*20px*/
+        {% assign f202_max = 18 %}
+        {% assign f202_min = f202_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f202_min = 12 %}
+        --f202_size: min(calc({{ f202_min }}px + ({{ f202_max }} - {{ f202_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f202_max }}px);
+
+        /*20px*/
+        {% assign f203_max = 18 %}
+        {% assign f203_min = f203_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f203_min = 12 %}
+        --f203_size: min(calc({{ f203_min }}px + ({{ f203_max }} - {{ f203_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f203_max }}px);
+        
+        /*18px*/
+        {% assign f18_max = 16 %}
+        {% assign f18_min = f18_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f18_min = 12 %}
+        --f18_size: min(calc({{ f18_min }}px + ({{ f18_max }} - {{ f18_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f18_max }}px);
+        
+        /*18px*/
+        {% assign f182_max = 16 %}
+        {% assign f182_min = f182_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f182_min = 12 %}
+        --f182_size: min(calc({{ f182_min }}px + ({{ f182_max }} - {{ f182_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f182_max }}px);
+        
+        /*16px*/
+        {% assign f16_max = 14 %}
+        {% assign f16_min = f16_max | times: desktop_min_width | divided_by: wrapper_size %}
+        {% assign f16_min = 12 %}
+        --f16_size: min(calc({{ f16_min }}px + ({{ f16_max }} - {{ f16_min }}) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), {{ f16_max }}px);        
+
+}
+
+@media only screen and (min-width: 750px) {
+    .h0 {
+      font-size: var(--h3_size);
+  }
+   h3 a {
+/*      font-size:var(--h4_size); */
+     font-size:var(--f18_size);
+   }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 749px) {
+    div.sim_pro_tt h3 {
+      font-size:20px !important;
+    }
+    div.sim_pro_price h3 {
+      font-size:18px !important;
+    }
+}
+
+@media only screen and (max-width: 749px) {
+  .main-page-title {
+    font-size: calc(var(--font-heading-scale) * 3rem);
+  }
+  
+  div.product__title h1 {
+    font-size:22px;
+  }
+  
+  div.product__info-wrapper .product__description ul li, div.faq_que_lists .wrapper .toggle {
+    font-size: 14px;
+  }
+  
+  .tab_data_inner h4 {
+    font-size:var(--f22_size);
+  }
+  
+  div.sim_pro_tt h3 {
+    font-size:var(--h3_size);
+  }
+  div.sim_pro_price h3 {
+    font-size:var(--f34_size);
+  }
+  div.faq_que_lists .content p {
+    font-size:16px; /*18px*/
+  }
+
+
+  
+                                          
+}
+
+
+  h2 {
+      font-size:var(--h2_size);
+  }
+
+  h3 {
+      font-size:var(--h3_size);
+  }
+
+  h4 {
+      font-size:var(--h4_size);
+  }
+  
+  .vid_cnt p {
+      font-size:var(--f30_size);
+  }
+  
+  .button, .signage_footer p, .mlink a, .cnewsletter .newsletter-form .field input {
+      font-size:var(--f16_size);
+  }
+
+  .banner__text p, .logo-bar-outer .section-header__title, .proj_head p {
+      font-size:var(--f26_size);
+  }
+
+  .brbanner .banner__buttons .button, .ps-bot p {
+      font-size:var(--f18_size) !important;
+  }
+
+  h5, .card-information .price {
+      font-size:var(--f20_size);
+  }
+
+  .st_num p, .dwd_head p, .au_name {
+      font-size:var(--f202_size);
+  }
+
+  .file_item a p {
+      font-size:var(--f24_size);
+  }
+  
+  .blog_tt h4 {
+      font-size:var(--f242_size);
+  }
+  
+  .blog_details p{
+      font-size:var(--f203_size);
+  }
+
+  .blog_more p {
+      font-size:var(--f182_size);
+  }
+
+  .customer h2 {
+      font-size:var(--h4_size);
+  }
+
+ .related-products__heading, .drawer__inner h2  {
+      font-size:var(--f30_size);
+  }
+
+  .price__container .price span, .product__info-wrapper .price--on-sale .price-item--regular, .toggle {
+    font-size:var(--f18_size);
+  }                            
+
+  .content p {
+    font-size:var(--f16_size);
+  }
+
+  .image-with-text__heading, .main-heading h2 {
+    font-size:var(--h3mm_size);
+  }  
+
+  .title--primary, .collection-hero__title, .customer>h1, .customer__title  {
+     font-size: var(--h3_size);
+  }
+
+  .facets__heading {
+    font-size:var(--f20_size) !important;
+  }
+
+  .facets__summary {
+    font-size:var(--f16_size) !important; /* 1.6rem !important; */
+  }
+
+  .facet-filters__field .facet-filters__label, .facet-filters__field .facet-filters__sort, .product-count-vertical .product-count__text {
+    font-size:1.6rem;
+  }
+
+  .mobile-facets .mobile-facets__heading , .collection-list-title {
+    font-size: var(--h3mm_size);
+  }
+
+  .cat_name {
+    font-size:var(--f30_size);
+  } 
+
+  .shp_tt p, .breadcrumbs_inner p, .product__info-wrapper .product__description ul li {
+    font-size:var(--f18_size);
+  }
+  
+  .product__title h1 {
+   font-size:var(--h2_size); 
+  }
+  
+  .price_main .price__regular .price-item--regular {
+    font-size:var(--f34_size);
+  }
+  
+  .product__info-wrapper .price--on-sale .price__sale .price-item--sale {
+      font-size:var(--f34_size);
+  }
+  
+  .product__info-wrapper .price--on-sale .price__sale .price-item--regular {
+        font-size:var(--f18_size);
+  }
+  
+  .variant_tt .form__label, .product__info-wrapper .quantity__input {
+        font-size:var(--f22_size);
+  }
+  
+  .bsize label, .add_cart_btn .button, .tab_items a {
+        font-size:var(--f18_size) !important;
+  }
+
+  .sim_head h3, .faq_head h3 {
+    font-size:var(--h3s_size);
+  }
+  
+  .sim_pro_tt h3, .sim_pro_price h3 {
+    font-size:var(--h3m_size);
+  }
+
+  .faq_head p {
+       font-size:var(--f202_size);
+  }
+
+  .faq_que_lists .content p {
+    font-size:var(--f18_size);
+  }
+
+ .crt_page .cart-items .cart-item__name {
+    font-size:var(--h4_size);
+  }
+  .crt_page .cart-items .product-option {
+    font-size:var(--f18_size);
+  }
+
+  .cart-drawer .cart-items .cart-item__name {
+    font-size:var(--f16_size);
+  }

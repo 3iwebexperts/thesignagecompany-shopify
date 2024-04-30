@@ -1,0 +1,1507 @@
+
+<div class="page-width custom_mega_menu">
+
+<!-- start right side -->
+   <div class="right_side mobileside">
+{% for block in section.blocks %}
+      <div class="mmenu_item">
+          <a class="{% if forloop.index == 1 %} active {% endif %}" href="#tab{{ forloop.index }}">{{ block.settings.mobmenuheading }}</a>
+      </div>                          
+      <!-- start right item -->                     
+       <div id="tab{{ forloop.index }}" class="tab_inner right_item"  style="{% if forloop.index == 1 %} display:block; {% endif %} ">  
+      <!-- start slider items -->
+         
+      <div class="slider_items swiper">
+         <!-- start slider inner -->
+         <div class="slider_inner swiper-wrapper">
+            <!-- start slider item -->            
+            <div class="slider_item swiper-slide">
+               <a href="{{ block.settings.megalink1 }}">
+                  <div class="slide_data">
+                     <div class="slide_img">
+                        <div class="backimg visible"
+                           style="background-image:url({{ block.settings.megaimage1 | img_url:'master' }});">
+                           <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 531 351">
+                              <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                           </svg>
+                        </div>
+
+                     </div>
+                     {% if  block.settings.megasubheading1 != blank %} 
+                     <div class="slide_subtt">
+                        <p>{{ block.settings.megasubheading1 }}</p>
+                     </div>
+                     {% endif %}  
+                     {% if  block.settings.megaheading1 != blank %}                         
+                     <div class="slide_head">
+                        <h5>{{ block.settings.megaheading1 }}</h5>
+                     </div>
+                    {% endif %}
+                  </div>
+               </a>
+            </div>
+         
+                <!-- end slider item -->
+  {% if  block.settings.megaimage2 != blank %}          
+<div class="slider_item swiper-slide">
+  <a href="{{ block.settings.megalink2 }}">
+    <div class="slide_data"> 
+      <div class="slide_img">
+        <div
+          class="backimg visible"
+          style="background-image:url({{ block.settings.megaimage2 | img_url:'master' }});"
+        >
+          <svg
+            class="transparent_svg"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 531 351"
+          >
+            <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+          </svg>
+        </div>
+      </div>
+     {% if  block.settings.megasubheading2 != blank %} 
+      <div class="slide_subtt">
+        <p>{{ block.settings.megasubheading2 }} </p>
+      </div>
+     {% endif %} 
+     {% if  block.settings.megaheading2 != blank %}    
+      <div class="slide_head">
+        <h5> {{ block.settings.megaheading2 }} </h5>
+      </div>
+      {% endif %} 
+    </div>
+  </a>
+</div>
+{% endif %}  
+<!-- end slider item --> 
+<!-- start slider item -->   
+{% if  block.settings.megaimage3 != blank %}          
+<div class="slider_item swiper-slide">
+  <a href="{{ block.settings.megalink3 }}">
+    <div class="slide_data"> 
+      <div class="slide_img">
+        <div
+          class="backimg visible"
+          style="background-image:url({{ block.settings.megaimage3 | img_url:'master' }});"
+        >
+          <svg
+            class="transparent_svg"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 531 351"
+          >
+            <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+          </svg>
+        </div>
+      </div>
+     {% if  block.settings.megasubheading3 != blank %} 
+      <div class="slide_subtt">
+        <p>{{ block.settings.megasubheading3 }} </p>
+      </div>
+     {% endif %} 
+     {% if  block.settings.megaheading3 != blank %}    
+      <div class="slide_head">
+        <h5> {{ block.settings.megaheading3 }} </h5>
+      </div>
+      {% endif %} 
+    </div>
+  </a>
+</div>
+{% endif %}  
+<!-- end slider item --> 
+<!-- start slider item --> 
+{% if  block.settings.megaimage4 != blank %}          
+<div class="slider_item swiper-slide">
+  <a href="{{ block.settings.megalink4 }}">
+    <div class="slide_data"> 
+      <div class="slide_img">
+        <div
+          class="backimg visible"
+          style="background-image:url({{ block.settings.megaimage4 | img_url:'master' }});"
+        >
+          <svg
+            class="transparent_svg"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 531 351"
+          >
+            <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+          </svg>
+        </div>
+      </div>
+     {% if  block.settings.megasubheading4 != blank %} 
+      <div class="slide_subtt">
+        <p>{{ block.settings.megasubheading4 }} </p>
+      </div>
+     {% endif %} 
+     {% if  block.settings.megaheading4 != blank %}    
+      <div class="slide_head">
+        <h5> {{ block.settings.megaheading4 }} </h5>
+      </div>
+      {% endif %} 
+    </div>
+  </a>
+</div>
+{% endif %}  
+<!-- end slider item -->    
+<!-- start slider item -->  
+{% if  block.settings.megaimage5 != blank %}          
+<div class="slider_item swiper-slide">
+  <a href="{{ block.settings.megalink5 }}">
+    <div class="slide_data"> 
+      <div class="slide_img">
+        <div
+          class="backimg visible"
+          style="background-image:url({{ block.settings.megaimage5 | img_url:'master' }});"
+        >
+          <svg
+            class="transparent_svg"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 531 351"
+          >
+            <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+          </svg>
+        </div>
+      </div>
+     {% if  block.settings.megasubheading5 != blank %} 
+      <div class="slide_subtt">
+        <p>{{ block.settings.megasubheading5 }} </p>
+      </div>
+     {% endif %} 
+     {% if  block.settings.megaheading5 != blank %}    
+      <div class="slide_head">
+        <h5> {{ block.settings.megaheading5 }} </h5>
+      </div>
+      {% endif %} 
+    </div>
+  </a>
+</div>
+{% endif %}  
+<!-- end slider item -->  
+<!-- start slider item -->  
+{% if  block.settings.megaimage6 != blank %}           
+<div class="slider_item swiper-slide">
+  <a href="{{ block.settings.megalink6 }}">
+    <div class="slide_data">
+      <div class="slide_img">
+        <div
+          class="backimg visible"
+          style="background-image:url({{ block.settings.megaimage6 | img_url:'master' }});"
+        >
+          <svg
+            class="transparent_svg"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 531 351"
+          >
+            <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+          </svg>
+        </div>
+      </div>
+     {% if  block.settings.megasubheading6 != blank %} 
+      <div class="slide_subtt">
+        <p>{{ block.settings.megasubheading6 }} </p>
+      </div>
+     {% endif %} 
+     {% if  block.settings.megaheading6 != blank %}    
+      <div class="slide_head">
+        <h5> {{ block.settings.megaheading6 }} </h5>
+      </div>
+      {% endif %} 
+    </div>
+  </a>
+</div>
+{% endif %}  
+<!-- end slider item --> 
+<!-- start slider item --> 
+{% if  block.settings.megaimage7 != blank %}          
+<div class="slider_item swiper-slide">
+  <a href="{{ block.settings.megalink7 }}">
+    <div class="slide_data"> 
+      <div class="slide_img">
+        <div
+          class="backimg visible"
+          style="background-image:url({{ block.settings.megaimage7 | img_url:'master' }});"
+        >
+          <svg
+            class="transparent_svg"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 531 351"
+          >
+            <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+          </svg>
+        </div>
+      </div>
+     {% if  block.settings.megasubheading7 != blank %} 
+      <div class="slide_subtt">
+        <p>{{ block.settings.megasubheading7 }} </p>
+      </div>
+     {% endif %} 
+     {% if  block.settings.megaheading7 != blank %}    
+      <div class="slide_head">
+        <h5> {{ block.settings.megaheading7 }} </h5>
+      </div>
+      {% endif %} 
+    </div>
+  </a>
+</div>
+{% endif %}
+<!-- start slider item -->
+{% if  block.settings.megaimage8 != blank %}          
+<div class="slider_item swiper-slide">
+  <a href="{{ block.settings.megalink8 }}">
+    <div class="slide_data"> 
+      <div class="slide_img">
+        <div
+          class="backimg visible"
+          style="background-image:url({{ block.settings.megaimage8 | img_url:'master' }});"
+        >
+          <svg
+            class="transparent_svg"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 531 351"
+          >
+            <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+          </svg>
+        </div>
+      </div>
+     {% if  block.settings.megasubheading8 != blank %} 
+      <div class="slide_subtt">
+        <p>{{ block.settings.megasubheading8 }} </p>
+      </div>
+     {% endif %} 
+     {% if  block.settings.megaheading8 != blank %}    
+      <div class="slide_head">
+        <h5> {{ block.settings.megaheading8 }} </h5>
+      </div>
+      {% endif %} 
+    </div>
+  </a>
+</div>
+{% endif %}  
+<!-- end slider item -->    
+<!-- start slider item --> 
+{% if  block.settings.megaimage9 != blank %}          
+<div class="slider_item swiper-slide">
+  <a href="{{ block.settings.megalink9 }}">
+    <div class="slide_data"> 
+      <div class="slide_img">
+        <div
+          class="backimg visible"
+          style="background-image:url({{ block.settings.megaimage9 | img_url:'master' }});"
+        >
+          <svg
+            class="transparent_svg"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 531 351"
+          >
+            <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+          </svg>
+        </div>
+      </div>
+     {% if  block.settings.megasubheading9 != blank %} 
+      <div class="slide_subtt">
+        <p>{{ block.settings.megasubheading9 }} </p>
+      </div>
+     {% endif %} 
+     {% if  block.settings.megaheading9 != blank %}    
+      <div class="slide_head">
+        <h5> {{ block.settings.megaheading9 }} </h5>
+      </div>
+      {% endif %} 
+    </div>
+  </a>
+</div>
+{% endif %}  
+<!-- end slider item --> 
+<!-- start slider item -->    
+{% if  block.settings.megaimage10 != blank %}           
+<div class="slider_item swiper-slide">
+  <a href="{{ block.settings.megalink10 }}">
+    <div class="slide_data">
+      <div class="slide_img">
+        <div
+          class="backimg visible"
+          style="background-image:url({{ block.settings.megaimage10 | img_url:'master' }});"
+        >
+          <svg
+            class="transparent_svg"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 531 351"
+          >
+            <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+          </svg>
+        </div>
+      </div>
+     {% if  block.settings.megasubheading10 != blank %} 
+      <div class="slide_subtt">
+        <p>{{ block.settings.megasubheading10 }} </p>
+      </div>
+     {% endif %} 
+     {% if  block.settings.megaheading10 != blank %}    
+      <div class="slide_head">
+        <h5> {{ block.settings.megaheading10 }} </h5>
+      </div>
+      {% endif %} 
+    </div>
+  </a>
+</div>
+{% endif %}  
+<!-- end slider item -->
+  {% comment %}
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+      {% endcomment %}        
+             </div>
+             <!-- end slider inner side -->
+        
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+
+        
+        <div class="swiper-scrollbar js-swiper-scrollbar"></div>
+                      
+          </div>
+          <!-- end slider items -->
+       </div>
+  {% endfor %} 
+{% comment %}     
+      <!-- end right item -->  
+      <div class="mmenu_item">
+          <a href="#tab2">Neon LED</a>
+      </div>     
+      <!-- start right item -->            
+       <div id="tab2" class="tab_inner right_item">
+          <!-- start slider items -->
+          <div class="slider_items swiper">
+             <!-- start slider inner -->
+             <div class="slider_inner swiper-wrapper">
+                <!-- start slider item -->
+                <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+                
+             </div>
+             <!-- end slider inner side -->
+        
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      
+          </div>
+          <!-- end slider items -->
+       </div>
+      <!-- end right item --> 
+
+      <div class="mmenu_item">
+        <a href="#tab3">Non illuminated</a>
+      </div>     
+       <!-- start right item -->            
+       <div id="tab3" class="tab_inner right_item">
+          <!-- start slider items -->
+          <div class="slider_items swiper">
+             <!-- start slider inner -->
+             <div class="slider_inner swiper-wrapper">
+                <!-- start slider item -->
+                <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/files/Rectangle_140_530x.png?v=1684152043);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+                
+             </div>
+             <!-- end slider inner side -->
+        
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      
+          </div>
+          <!-- end slider items -->
+       </div>
+      <!-- end right item --> 
+
+
+       <div class="mmenu_item">
+            <a href="#tab4">Light Box</a>
+       </div>
+        <!-- start right item -->            
+       <div id="tab4" class="tab_inner right_item">
+          <!-- start slider items -->
+          <div class="slider_items swiper">
+             <!-- start slider inner -->
+             <div class="slider_inner swiper-wrapper">
+                <!-- start slider item -->
+                <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/files/Rectangle_140_1_530x.png?v=1684152042);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+                
+             </div>
+             <!-- end slider inner side -->
+        
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      
+          </div>
+          <!-- end slider items -->
+       </div>
+      <!-- end right item --> 
+
+
+       <div class="mmenu_item">
+            <a href="#tab5">Marquee letters</a>
+       </div>     
+      <!-- start right item -->            
+       <div id="tab5" class="tab_inner right_item">
+          <!-- start slider items -->
+          <div class="slider_items swiper">
+             <!-- start slider inner -->
+             <div class="slider_inner swiper-wrapper">
+                <!-- start slider item -->
+                <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/files/Rectangle_140_2_530x.png?v=1684152043);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+                
+             </div>
+             <!-- end slider inner side -->
+        
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      
+          </div>
+          <!-- end slider items -->
+       </div>
+      <!-- end right item --> 
+
+
+      <div class="mmenu_item">
+        <a href="#tab6">Full lite</a>
+      </div>
+       <!-- start right item -->            
+       <div id="tab6" class="tab_inner right_item">
+          <!-- start slider items -->
+          <div class="slider_items swiper">
+             <!-- start slider inner -->
+             <div class="slider_inner swiper-wrapper">
+                <!-- start slider item -->
+                <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/files/Rectangle_140_6_530x.png?v=1684152043);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+    
+                  <!-- start slider item -->
+                  <div class="slider_item swiper-slide">
+                   <a href="#">
+                      <div class="slide_data">
+                         <div class="slide_img">
+                            <div class="backimg visible"
+                               style="background-image:url(//cdn.shopify.com/s/files/1/0714/4928/0804/articles/blog1_700x.png?v=1682169072);">
+                               <svg class="transparent_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 531 351">
+                                  <rect class="cls-1" x="0.5" y="0.5" width="530" height="350"></rect>
+                               </svg>
+                            </div>
+    
+                         </div>
+                         <div class="slide_subtt">
+                            <p>loreum subtitle</p>
+                         </div>
+                         <div class="slide_head">
+                            <h5>Loreum Heading</h5>
+                         </div>
+                      </div>
+                   </a>
+                </div>
+                <!-- end slider item -->
+                
+             </div>
+             <!-- end slider inner side -->
+        
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      
+          </div>
+          <!-- end slider items -->
+       </div>
+      <!-- end right item --> 
+   {% endcomment %}   
+                  
+   </div>
+   <!-- end right side -->
+
+</div>

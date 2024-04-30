@@ -1,0 +1,106 @@
+<div class="all_product_details">
+  <div class="page-width pad80">
+    {% if section.blocks.size > 0 %}
+      <ul class="tabs-list">
+        {% for block in section.blocks %}
+          {% if block.settings.tab_title != blank %}
+            <li class="tab_items {% if forloop.index == 1 %}active{% endif %}">
+              <a href="#tab{{ forloop.index }}"> {{ block.settings.tab_title }} </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <div class="page-width all_tab_data">
+      <div id="tab1" class="tab_inn active">
+        <div class="tab_data">
+          <div class="tab_data_inner">
+            {{ product.description }}
+          </div>
+        </div>
+      </div>
+
+      <div id="tab2" class="tab_inn">
+        <div class="tab_data">
+          <div class="tab_data_inner">
+            <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+          </div>
+        </div>
+      </div>
+      {% if section.settings.tab_content_3 != blank %}
+        <div id="tab3" class="tab_inn">
+          <div class="tab_data">
+            <div class="tab_data_inner">
+              {{ section.settings.tab_content_3 }}
+              {{ section.settings.page_content_3.content }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if section.settings.tab_content_3 != blank %}
+      <div id="tab4" class="tab_inn">
+        <div class="tab_data">
+          <div class="tab_data_inner">
+            {{ section.settings.tab_content_4 }}
+            {{ section.settings.page_content_4.content }}
+          </div>
+        </div>
+      </div>
+       {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Details Tabs",
+  "class": "product-details-tabs",
+  "settings":[
+       {
+        "type":"richtext",
+        "id":"tab_content_3",
+        "label":"Tab 3 Content"
+       },
+       {
+        "type":"page",
+        "id":"page_content_3",
+        "label":"Tab 3 Select Page"
+       },
+       {
+        "type":"richtext",
+        "id":"tab_content_4",
+        "label":"Tab 4 Content"
+       },
+       {
+        "type":"page",
+        "id":"page_content_4",
+        "label":"Tab 4 Select Page"
+       }
+  ],
+   "blocks": [
+     {
+        "type": "tab_title",
+        "name": "Product Tab Title",
+        "limit":4,
+        "settings": [
+               {
+                "type":"text",
+                "id":"tab_title",
+                "label":"Tab Title"
+               }
+        ]
+  }] ,
+  "presets": [
+    {
+      "name": "Product Details Tabs",
+      "category": "Images"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

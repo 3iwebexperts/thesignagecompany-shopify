@@ -1,0 +1,240 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+<div class="faq_sec">
+  <div class="page-width pad80">
+    <div class="faq_sec_inner">
+      {% if section.settings.faq_heading != blank %}
+      <div class="faq_head">
+        <h3>{{ section.settings.faq_heading }}</h3>
+         {{ section.settings.faq_content }}
+      </div>
+      {% endif %}  
+      <div class="faq_que_lists">
+        <div class="boxaccordion">
+          {%- if section.blocks.size > 0 -%}
+            <div class="containerwidth">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'main-heading' %}
+                    <div class="main-heading">
+                      <h2>{{ block.settings['main-heading'] }}</h2>
+                    </div>
+                  {% when 'Answer' %}
+                    <div class="wrapper">
+                      {% if block.settings.que != blank %}
+                        <button class="toggle">
+                          {{ block.settings.que }}
+                          <i class="fas fa-plus icon"></i>
+                        </button>
+                      {% endif %}
+                      {% if block.settings.ans != blank %}
+                        <div class="content">
+                          <div class="inner_cnt">
+                              {{ block.settings.ans }}
+                          </div>
+                        </div>
+                      {% endif %}
+                    </div>
+                {% endcase %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+  .faq_sec_inner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .faq_head {
+    width: 42.43%;
+  }
+
+  .faq_que_lists {
+    width: 56.18%;
+  }
+
+  .faq_head h3 {
+    font-weight: 700;
+  }
+  .faq_head p {
+    margin-top: 22px;
+  }
+
+  .faq_que_lists .containerwidth {
+    padding-top:0px;
+    padding-bottom:0px;
+  }
+
+  .faq_que_lists .wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 0.6px solid #C1C3D8;
+    border-radius: 10px;
+    box-shadow: none;
+    margin-bottom:15px;
+  }
+
+  .faq_que_lists .wrapper .toggle {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top:24.5px;
+    padding-bottom:24.5px;
+    font-weight:500;
+    color:rgba(83,83,83,0.7);    
+  }
+
+  .faq_que_lists .wrapper .toggle .fas {
+    font-weight:500;
+    transition:all 0.3s;
+    color: var(--blk_clr);
+    padding-left:10px;
+  }
+  
+  .faq_que_lists .wrapper .toggle .act {
+    transform:rotate(45deg);
+    color:var(--pnk_clr);
+  }
+  
+  .content .inner_cnt {
+      border-top: 0.6px solid #C1C3D8;
+      padding-top: 16px;
+      padding-bottom: 40px;
+      padding-left:30px;
+      padding-right:30px;
+      color:rgba(83,83,83,0.7);
+  }
+  
+  .containerwidth {
+      width: 100%;
+      /* margin-bottom: 60px; */
+  }
+
+  .containerwidth .wrapper .toggle {
+      width: 100%;
+      background-color: transparent;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      text-align:left;
+  }
+  .content {
+      position: relative;
+      font-size: 14px;
+      text-align: justify;
+      line-height: 30px;
+      height: 0;
+      overflow: hidden;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+  }
+</style>
+
+<script>
+  let toggles = document.getElementsByClassName("toggle");
+  let contentDiv = document.getElementsByClassName("content");
+  let icons = document.getElementsByClassName("fas");
+
+  contentDiv[0].style.height = contentDiv[0].scrollHeight + "px";
+  toggles[0].style.color = "#FF0060";
+  icons[0].classList.add("act");
+
+  for (let i = 0; i < toggles.length; i++) {
+      toggles[i].addEventListener("click", () => {
+          if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight) {
+              contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
+              toggles[i].style.color = "#FF0060";
+              icons[i].classList.add("act");
+          } else {
+              contentDiv[i].style.height = "0px";
+              toggles[i].style.color = "rgba(83,83,83,0.7)";
+              icons[i].classList.remove("act");
+          }
+
+          for (let j = 0; j < contentDiv.length; j++) {
+              if (j !== i) {
+                  contentDiv[j].style.height = 0;
+                  toggles[j].style.color = "rgba(83,83,83,0.7)";
+                  icons[j].classList.remove("act");
+              }
+          }
+      });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "FAQ with Heading",
+  "class": "bfaq",
+  "settings": [
+       {
+        "type":"text",
+        "id":"faq_heading",
+        "label":"Faq Heading",
+        "default":"Frequently Asked Questions" 
+       },
+       {
+        "type":"richtext",
+        "id":"faq_content",
+        "label":"Faq Content",
+        "default":"<p>Interested in creating an application best suited for the industry you operate in? See why you should trust us as your software development partner!</p>" 
+       }
+  ],
+  "blocks": [
+{
+ "name": "Question",
+ "type": "Answer",
+ "settings": [
+  {
+  "type":"text",
+  "id":"que",
+  "label":"Question"
+  },
+  {
+  "type":"richtext",
+  "id":"ans",
+  "label":"Answer"
+  }
+]
+},
+{
+"name": "Main Heading",
+"type": "main-heading",
+"settings": [
+{
+"type":"text",
+"id":"main-heading",
+"label":"Heading"
+}
+]
+}
+],
+  "presets":[
+    {
+      "name":"FAQ with Heading"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

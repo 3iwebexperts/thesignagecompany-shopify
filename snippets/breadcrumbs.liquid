@@ -1,0 +1,15 @@
+<div class="breadcrumbs_part">
+  <div class="breadcrumbs_inner">
+    <p>
+      <a href="/">Home</a>
+      {% for collection in product.collections %}
+        {% unless collection.handle == 'all' and collection.handle == 'frontpage' %}
+          <span>/</span>
+          <a href="{{ collection.url }}">{{ collection.title }}</a>
+          {% break %}
+        {% endunless %}
+      {% endfor %}
+      <span>/</span>{{ product.title }}
+    </p>
+  </div>
+</div>

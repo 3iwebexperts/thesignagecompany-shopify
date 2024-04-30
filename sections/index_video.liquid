@@ -1,0 +1,141 @@
+<div class="ind_video">
+  <div class="ind_video_inner">
+    <div class="video_sec">
+      <div class="vid_inner">
+        <div class="vid_container">
+
+          {% if section.settings.vidlink != blank %}
+          <iframe src="https://player.vimeo.com/video/{{ section.settings.vidlink }}?background=1&amp;autoplay=1&amp;loop=1&amp;byline=0&amp;title=0" frameborder="0" controls="false" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+          {% endif %}  
+          
+          {% comment %}
+          <video muted autoplay
+            id="player"
+            class="bvideo mview"
+            poster="{{ 'image1.png' | asset_url }}"
+          >
+            <source src="{{ section.settings.vidlink }}" type="video/mp4">
+          </video>         
+          
+          {% endcomment %}
+        
+
+          {% comment %}  
+          <video muted autoplay
+            id="player"
+            class="bvideo dview"
+            poster="{{ section.settings.deskimage | img_url:"master" }}"
+          >
+            <source src="{{ section.settings.vidlink }}" type="video/mp4">
+          </video>
+          {% endcomment %}
+
+          <div class="vid_cnt">
+              <div class="page-width">
+                <div class="vid_cnt_inner">
+                {% if section.settings.v_heading != blank %}                  
+                <h2>{{ section.settings.v_heading }}</h2>
+                {% endif %} 
+                {% if section.settings.v_smheading != blank %}                  
+                <p>{{ section.settings.v_smheading }}</p>
+                {% endif %} 
+                {% if section.settings.v_buttonlink != blank and section.settings.v_button != blank  %}                  
+                <div><a class="button" href="{{ section.settings.v_buttonlink }}">{{ section.settings.v_button }}</a></div>
+                {% endif %}  
+              </div>  
+                </div>  
+          </div>  
+
+          {% if section.settings.fancyvid != blank %}           
+          <div class="ply_icn open_vid">
+            <a data-fancybox="vid" href="https://player.vimeo.com/video/{{ section.settings.fancyvid }}?background=1&amp;autoplay=1&amp;loop=1&amp;byline=0&amp;title=0">
+              <svg version="1.1" id="Layer_1" width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49 49" xml:space="preserve">
+              <circle class="st0" cx="24.5" cy="24.5" r="23.5"></circle>
+                <path class="st1" d="M28,23.6c0.7,0.4,0.7,1.3,0,1.7l-6,3.5c-0.7,0.4-1.5-0.1-1.5-0.9V21c0-0.8,0.8-1.3,1.5-0.9L28,23.6z"></path>
+              </svg>
+              <p>{{ section.settings.vidtext }}</p>
+            </a> 
+          </div> 
+           {% endif %} 
+          {% if section.settings.scrolltext != blank %} 
+         
+          <div class="arrow-scroll scroll-home">
+            <a class="scrl" href="#section2"> 
+              <div class="arrow">&nbsp;</div>
+              <div class="scroll">{{ section.settings.scrolltext }}</div>   
+            </a>
+           </div>
+        
+        {% endif %}     
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "Index Video",
+   "class": "index-video",
+   "settings":[
+   {
+     "type": "text",
+     "id": "vidlink",
+     "label": "Background Video",
+     "info":"Vimeo id Number"
+   },     
+   {
+     "type": "text",
+     "id": "fancyvid",
+     "label": "Popup Video",
+     "info":"Vimeo id Number"
+   },     
+   {
+     "type": "text",
+     "id": "v_heading",
+     "label": "Heading"
+   },     
+   {
+     "type": "textarea",
+     "id": "v_smheading",
+     "label": "Small Heading"
+   },     
+   {
+     "type": "text",
+     "id": "v_button",
+     "label": "Button Label"
+   },     
+   {
+     "type": "url",
+     "id": "v_buttonlink",
+     "label": "Button Link"
+   },     
+   {
+     "type": "text",
+     "id": "vidtext",
+     "label": "Popup Video text",
+     "default": "Open Video"
+   },     
+   {
+     "type": "text",
+     "id": "scrolltext",
+     "label": "Scroll Down text",
+     "default": "Scroll Down"
+   }     
+   ],
+   "presets": [
+     {
+       "name": "Index Video",
+       "category": "Images"
+     }
+   ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

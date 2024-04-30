@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="{{ 'main.ec3a8a07.css' | asset_url }}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Neonderthaw&family=Great+Vibes&family=Permanent+Marker&family=Pacifico&family=Alumni+Sans+Collegiate+One&family=Lobster+Two&family=Creepster&family=Bungee+Shade&family=Princess+Sofia&family=Yellowtail&family=Roboto+Condensed&&display=swap"
+  rel="stylesheet">
+<script defer="defer" src="{{ 'main.6526c7c1.js' | asset_url }}"></script>
+
+<script type="x-shader/x-vertex" id="vertexshader">varying vec2 vUv;
+
+  void main() {
+
+    vUv = uv;
+
+    gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+  }</script>
+  <script type="x-shader/x-fragment" id="fragmentshader">uniform sampler2D baseTexture;
+  uniform sampler2D bloomTexture;
+
+  varying vec2 vUv;
+
+  void main() {
+
+    gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
+
+  }</script>
+
+{% comment %}
+<script src="{{ 'custom_app.js' | asset_url }}"></script>
+{% endcomment %}
+
+<div id="root"></div>
+
+<input type="hidden" value="thesignagecompany.myshopify.com" id="shop">
+
+{% schema %}
+ {
+   "name": "Create Your Design",
+    "class": "create-design"
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,378 @@
+<div class="how_it">
+  <div class="how_bg">&nbsp;</div>
+  <div class="page-width pad80">
+    <div class="how_it_inner">
+      <div class="proj_head">
+        {% if section.settings.h_heading != blank %}
+          <h2>{{ section.settings.h_heading }}</h2>
+        {% endif %}
+        {% if section.settings.h_content != blank %}
+          <p>
+            {{ section.settings.h_content }}
+          </p>
+        {% endif %}
+      </div>
+      <div class="how_steps">
+        <div class="ps-timeline-sec">
+          <div class="container">
+            <ol class="ps-timeline">
+              <div id="stepline" class="hrline">&nbsp;</div>
+              <li class="step_item">
+                <div class="img-handler-top">
+                  {% if section.settings.s_step1 != blank %}
+                    <div class="st_num">
+                      <p>{{ section.settings.s_step1 }}</p>
+                    </div>
+                  {% endif %}
+                  <div class="num_icn">
+                    {% if section.settings.s_image1 != blank %}
+                      <img src="{{ section.settings.s_image1 | img_url:'70x' }}">
+                    {% endif %}
+                    {% if section.settings.s_smheading1 != blank %}
+                      <h5>{{ section.settings.s_smheading1 }}</h5>
+                    {% endif %}
+                  </div>
+                </div>
+                {% if section.settings.s_content1 != blank %}
+                  <div class="ps-bot">
+                    <p>{{ section.settings.s_content1 }}</p>
+                  </div>
+                {% endif %}
+                <span class="ps-sp-top">
+                  <img class="dview" src="{{ 'arrow.svg' | asset_url }}">
+                  <img class="mview" src="{{ 'stepar.svg' | asset_url }}">
+                </span>
+              </li>
+
+              <li class="step_item">
+                <div class="img-handler-top">
+                  {% if section.settings.s_step2 != blank %}
+                    <div class="st_num">
+                      <p>{{ section.settings.s_step2 }}</p>
+                    </div>
+                  {% endif %}
+                  <div class="num_icn">
+                    {% if section.settings.s_image2 != blank %}
+                      <img src="{{ section.settings.s_image2 | img_url:'70x' }}">
+                    {% endif %}
+                    {% if section.settings.s_smheading2 != blank %}
+                      <h5>{{ section.settings.s_smheading2 }}</h5>
+                    {% endif %}
+                  </div>
+                </div>
+                {% if section.settings.s_content2 != blank %}
+                  <div class="ps-bot">
+                    <p>{{ section.settings.s_content2 }}</p>
+                  </div>
+                {% endif %}
+                <span class="ps-sp-top">
+                  <img class="dview" src="{{ 'arrow.svg' | asset_url }}">
+                  <img class="mview" src="{{ 'stepar.svg' | asset_url }}">
+                </span>
+              </li>
+
+              <li class="step_item">
+                <div class="img-handler-top">
+                  <div class="st_num">
+                    {% if section.settings.s_step3 != blank %}
+                      <p>{{ section.settings.s_step3 }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="num_icn">
+                    {% if section.settings.s_image3 != blank %}
+                      <img src="{{ section.settings.s_image3 | img_url:'70x' }}">
+                    {% endif %}
+                    {% if section.settings.s_smheading3 != blank %}
+                      <h5>{{ section.settings.s_smheading3 }}</h5>
+                    {% endif %}
+                  </div>
+                </div>
+                {% if section.settings.s_content3 != blank %}
+                  <div class="ps-bot">
+                    <p>{{ section.settings.s_content3 }}</p>
+                  </div>
+                {% endif %}
+                <span class="ps-sp-top">
+                  <img class="dview" src="{{ 'arrow.svg' | asset_url }}">
+                  <img class="mview" src="{{ 'stepar.svg' | asset_url }}">
+                </span>
+              </li>
+
+              <li class="step_item">
+                <div class="img-handler-top">
+                  <div class="st_num">
+                    {% if section.settings.s_step4 != blank %}
+                      <p>{{ section.settings.s_step4 }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="num_icn">
+                    {% if section.settings.s_image4 != blank %}
+                      <img src="{{ section.settings.s_image4 | img_url:'70x' }}">
+                    {% endif %}
+                    {% if section.settings.s_smheading4 != blank %}
+                      <h5>{{ section.settings.s_smheading4 }}</h5>
+                    {% endif %}
+                  </div>
+                </div>
+                {% if section.settings.s_content4 != blank %}
+                  <div class="ps-bot">
+                    <p>{{ section.settings.s_content4 }}</p>
+                  </div>
+                {% endif %}
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      {% if section.settings.s_buttonlink1 != blank and section.settings.s_buttonname1 != blank %}
+        <div class="design_btn">
+          <a href="{{ section.settings.s_buttonlink1 }}" class="button button--primary">
+            {{ section.settings.s_buttonname1 }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="dwd_sec">
+      <div class="dwd_sec_inner">
+        <div class="dwd_head">
+          <h3 class="dwd_heading">{{ section.settings.dwntext }}</h3>
+          <p>
+            {{ section.settings.dwncontent }}
+          </p>
+        </div>
+
+        <div class="dwd_file">
+         
+            <div class="file_item">
+              <a href="{{ section.settings.filel1 }}"  target="_blank" download>
+                <p>{{ section.settings.filen1 }}</p>
+                <div class="fl_icn">
+                  <img src="{{ 'fl.svg' | asset_url }}">
+                  <p>{{ section.settings.filetext1 }}</p>
+                </div>
+              </a>
+            </div>
+    
+          <div class="file_item">
+            <a href="{{ section.settings.filel2 }}" download  target="_blank">
+              <p>{{ section.settings.filen2  }}</p>
+              <div class="fl_icn">
+                <img src="{{ 'fl.svg' | asset_url }}">
+                <p>{{ section.settings.filetext2 }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% if section.settings.s_buttonlink != blank and section.settings.s_buttonname != blank %}
+      <div class="quote">
+        <a href="{{ section.settings.s_buttonlink }}" class="button button--primary">
+          {{ section.settings.s_buttonname }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "How it works",
+  "class": "how-it-works",
+  "tag": "section",
+  "settings":[
+     {
+      "type": "text",
+      "id": "h_heading",
+      "label": "Heading"
+     },
+     {
+      "type": "textarea",
+      "id": "h_content",
+      "label": "content"
+     },
+     {
+      "type": "header",
+      "content": "Step 1"
+     },
+     {
+      "type": "text",
+      "id": "s_step1",
+      "label": "Step text"
+     },
+     {
+      "type": "image_picker",
+      "id": "s_image1",
+      "label": "Image"
+     },
+     {
+      "type": "text",
+      "id": "s_smheading1",
+      "label": "Heading"
+     },
+     {
+      "type": "textarea",
+      "id": "s_content1",
+      "label": "Content"
+     },
+     {
+      "type": "header",
+      "content": "Step 2"
+     },
+     {
+      "type": "text",
+      "id": "s_step2",
+      "label": "Step text"
+     },
+     {
+      "type": "image_picker",
+      "id": "s_image2",
+      "label": "Image"
+     },
+     {
+      "type": "text",
+      "id": "s_smheading2",
+      "label": "Heading"
+     },
+     {
+      "type": "textarea",
+      "id": "s_content2",
+      "label": "Content"
+     },
+     {
+      "type": "header",
+      "content": "Step 3"
+     },
+     {
+      "type": "text",
+      "id": "s_step3",
+      "label": "Step text"
+     },
+     {
+      "type": "image_picker",
+      "id": "s_image3",
+      "label": "Image"
+     },
+     {
+      "type": "text",
+      "id": "s_smheading3",
+      "label": "Heading"
+     },
+     {
+      "type": "textarea",
+      "id": "s_content3",
+      "label": "Content"
+     },
+     {
+      "type": "header",
+      "content": "Step 4"
+     },
+     {
+      "type": "text",
+      "id": "s_step4",
+      "label": "Step text"
+     },
+     {
+      "type": "image_picker",
+      "id": "s_image4",
+      "label": "Image"
+     },
+     {
+      "type": "text",
+      "id": "s_smheading4",
+      "label": "Heading"
+     },
+     {
+      "type": "textarea",
+      "id": "s_content4",
+      "label": "Content"
+     },
+     {
+      "type": "text",
+      "id": "dwntext",
+      "label": "Heading"
+     },
+     {
+      "type": "text",
+      "id": "dwncontent",
+      "label": "Content"
+     },
+     {
+      "type": "header",
+      "content": "File 1"
+     },
+     {
+      "type": "text",
+      "id": "filen1",
+      "label": "File Name"
+     },
+     {
+      "type": "text",
+      "id": "filel1",
+      "label": "Update File Source",
+      "info": "Upload file in files folder and use the source URL here"
+     },
+     {
+      "type": "text",
+      "id": "filetext1",
+      "label": "File text",
+      "default":"File"
+     },
+     {
+      "type": "header",
+      "content": "File 2"
+     },
+     {
+      "type": "text",
+      "id": "filen2",
+      "label": "File Name"
+     },
+     {
+      "type": "text",
+      "id": "filel2",
+      "label": "Update File Source",
+      "info": "Upload file in files folder and use the source URL here"
+     },
+     {
+      "type": "text",
+      "id": "filetext2",
+      "label": "File text",
+      "default":"File"
+     },
+     {
+      "type": "text",
+      "id": "s_buttonname1",
+      "label": "Step Button label"
+     },
+     {
+      "type": "url",
+      "id": "s_buttonlink1",
+      "label": "Step Button link"
+     },
+     {
+      "type": "text",
+      "id": "s_buttonname",
+      "label": "Button label"
+     },
+     {
+      "type": "url",
+      "id": "s_buttonlink",
+      "label": "Button link"
+     }
+  ],
+  "presets": [
+    {
+      "name": "How it works",
+      "category": "Images"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,322 @@
+ :root {
+        
+        
+        
+        --ds_max_viewport: 1780;
+        --ds_min_viewport: 320;
+        --ds_max_viewport_px: 1780px;
+        --ds_min_viewport_px: 320px;
+        
+        /*60px*/   
+        
+        
+        
+        --h2_size: min(calc(20px + (56 - 20) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 56px);
+
+        /*48px*/   
+        
+        
+        
+        --h3_size: min(calc(22px + (44 - 22) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 44px);
+
+         /*42px*/   
+        
+        
+        
+        --h3s_size: min(calc(20px + (38 - 20) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 38px);
+        
+
+        /*34px*/
+        
+        
+        
+        --f34_size: min(calc(20px + (30 - 20) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 30px);
+
+        /*30px*/   
+        
+        
+        
+        --h3mm_size: min(calc(18px + (26 - 18) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 26px);
+        
+        /*30px*/
+        
+        
+        
+        --f30_size: min(calc(14px + (26 - 14) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 26px);
+
+        /*28px*/   
+        
+        
+        
+        --h3m_size: min(calc(12px + (24 - 12) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 24px);
+        
+         /*26px*/
+        
+        
+        
+        --f26_size: min(calc(12px + (22 - 12) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 22px);
+
+        /*24px*/
+        
+        
+        
+        --f24_size: min(calc(12px + (22 - 12) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 22px);
+
+        /*24px*/
+        
+        
+        
+        --f242_size: min(calc(10px + (22 - 10) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 22px);
+          
+        /*22px*/   
+        
+        
+        
+        --h4_size: min(calc(12px + (20 - 12) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 20px);
+        
+         /*22px*/
+        
+        
+        
+        --f22_size: min(calc(16px + (20 - 16) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 20px);
+        
+         /*20px*/
+        
+        
+        
+        --f20_size: min(calc(16px + (18 - 16) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 18px);
+
+        /*20px*/
+        
+        
+        
+        --f202_size: min(calc(12px + (18 - 12) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 18px);
+
+        /*20px*/
+        
+        
+        
+        --f203_size: min(calc(12px + (18 - 12) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 18px);
+        
+        /*18px*/
+        
+        
+        
+        --f18_size: min(calc(12px + (16 - 12) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 16px);
+        
+        /*18px*/
+        
+        
+        
+        --f182_size: min(calc(12px + (16 - 12) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 16px);
+        
+        /*16px*/
+        
+        
+        
+        --f16_size: min(calc(12px + (14 - 12) * ((min(100vw, var(--ds_max_viewport_px)) - var(--ds_min_viewport_px)) / (var(--ds_max_viewport) - var(--ds_min_viewport)))), 14px);        
+
+}
+
+@media only screen and (min-width: 750px) {
+    .h0 {
+      font-size: var(--h3_size);
+  }
+   h3 a {
+/*      font-size:var(--h4_size); */
+     font-size:var(--f18_size);
+   }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 749px) {
+    div.sim_pro_tt h3 {
+      font-size:20px !important;
+    }
+    div.sim_pro_price h3 {
+      font-size:18px !important;
+    }
+}
+
+@media only screen and (max-width: 749px) {
+  .main-page-title {
+    font-size: calc(var(--font-heading-scale) * 3rem);
+  }
+  
+  div.product__title h1 {
+    font-size:22px;
+  }
+  
+  div.product__info-wrapper .product__description ul li, div.faq_que_lists .wrapper .toggle {
+    font-size: 14px;
+  }
+  
+  .tab_data_inner h4 {
+    font-size:var(--f22_size);
+  }
+  
+  div.sim_pro_tt h3 {
+    font-size:var(--h3_size);
+  }
+  div.sim_pro_price h3 {
+    font-size:var(--f34_size);
+  }
+  div.faq_que_lists .content p {
+    font-size:16px; /*18px*/
+  }
+
+
+  
+                                          
+}
+
+
+  h2 {
+      font-size:var(--h2_size);
+  }
+
+  h3 {
+      font-size:var(--h3_size);
+  }
+
+  h4 {
+      font-size:var(--h4_size);
+  }
+  
+  .vid_cnt p {
+      font-size:var(--f30_size);
+  }
+  
+  .button, .signage_footer p, .mlink a, .cnewsletter .newsletter-form .field input {
+      font-size:var(--f16_size);
+  }
+
+  .banner__text p, .logo-bar-outer .section-header__title, .proj_head p {
+      font-size:var(--f26_size);
+  }
+
+  .brbanner .banner__buttons .button, .ps-bot p {
+      font-size:var(--f18_size) !important;
+  }
+
+  h5, .card-information .price {
+      font-size:var(--f20_size);
+  }
+
+  .st_num p, .dwd_head p, .au_name {
+      font-size:var(--f202_size);
+  }
+
+  .file_item a p {
+      font-size:var(--f24_size);
+  }
+  
+  .blog_tt h4 {
+      font-size:var(--f242_size);
+  }
+  
+  .blog_details p{
+      font-size:var(--f203_size);
+  }
+
+  .blog_more p {
+      font-size:var(--f182_size);
+  }
+
+  .customer h2 {
+      font-size:var(--h4_size);
+  }
+
+ .related-products__heading, .drawer__inner h2  {
+      font-size:var(--f30_size);
+  }
+
+  .price__container .price span, .product__info-wrapper .price--on-sale .price-item--regular, .toggle {
+    font-size:var(--f18_size);
+  }                            
+
+  .content p {
+    font-size:var(--f16_size);
+  }
+
+  .image-with-text__heading, .main-heading h2 {
+    font-size:var(--h3mm_size);
+  }  
+
+  .title--primary, .collection-hero__title, .customer>h1, .customer__title  {
+     font-size: var(--h3_size);
+  }
+
+  .facets__heading {
+    font-size:var(--f20_size) !important;
+  }
+
+  .facets__summary {
+    font-size:var(--f16_size) !important; /* 1.6rem !important; */
+  }
+
+  .facet-filters__field .facet-filters__label, .facet-filters__field .facet-filters__sort, .product-count-vertical .product-count__text {
+    font-size:1.6rem;
+  }
+
+  .mobile-facets .mobile-facets__heading , .collection-list-title {
+    font-size: var(--h3mm_size);
+  }
+
+  .cat_name {
+    font-size:var(--f30_size);
+  } 
+
+  .shp_tt p, .breadcrumbs_inner p, .product__info-wrapper .product__description ul li {
+    font-size:var(--f18_size);
+  }
+  
+  .product__title h1 {
+   font-size:var(--h2_size); 
+  }
+  
+  .price_main .price__regular .price-item--regular {
+    font-size:var(--f34_size);
+  }
+  
+  .product__info-wrapper .price--on-sale .price__sale .price-item--sale {
+      font-size:var(--f34_size);
+  }
+  
+  .product__info-wrapper .price--on-sale .price__sale .price-item--regular {
+        font-size:var(--f18_size);
+  }
+  
+  .variant_tt .form__label, .product__info-wrapper .quantity__input {
+        font-size:var(--f22_size);
+  }
+  
+  .bsize label, .add_cart_btn .button, .tab_items a {
+        font-size:var(--f18_size) !important;
+  }
+
+  .sim_head h3, .faq_head h3 {
+    font-size:var(--h3s_size);
+  }
+  
+  .sim_pro_tt h3, .sim_pro_price h3 {
+    font-size:var(--h3m_size);
+  }
+
+  .faq_head p {
+       font-size:var(--f202_size);
+  }
+
+  .faq_que_lists .content p {
+    font-size:var(--f18_size);
+  }
+
+ .crt_page .cart-items .cart-item__name {
+    font-size:var(--h4_size);
+  }
+  .crt_page .cart-items .product-option {
+    font-size:var(--f18_size);
+  }
+
+  .cart-drawer .cart-items .cart-item__name {
+    font-size:var(--f16_size);
+  }
